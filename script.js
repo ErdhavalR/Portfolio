@@ -73,31 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Theme Toggle ---
-    const toggleButton = document.getElementById('theme-toggle');
-    const body = document.body;
-    const icon = toggleButton.querySelector('i');
-
-    // Check for saved user preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        body.setAttribute('data-theme', 'light');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    }
-
-    toggleButton.addEventListener('click', () => {
-        const currentTheme = body.getAttribute('data-theme');
-        if (currentTheme === 'light') {
-            body.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        } else {
-            body.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        }
-    });
+    // --- Theme Toggle Removed for v1.3.0 ---
+    // User requested specifically to focus on Dark Mode and visibility.
 });

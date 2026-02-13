@@ -1,50 +1,53 @@
 /* Global Styles */
 :root {
-    --primary-color: #512bd4;
+    --text-color: #e0e0e0;
+    /* Restored text color */
+    --heading-color: #ffffff;
+    /* Restored heading color */
+    --primary-color: #8c52ff;
+    /* Brighter purple for better contrast on dark bg */
     /* .NET Purple */
     --secondary-color: #00ff88;
     /* Neon Green */
     --accent-color: #00d4ff;
     /* Neon Blue */
     --bg-color: #050505;
-    --subtext-color: #e0e0e0;
-    /* Default subtext same as text for now, or slightly dimmer */
-    --muted-color: #aaaaaa;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --input-bg: rgba(0, 0, 0, 0.2);
-    --header-bg: rgba(5, 5, 5, 0.8);
+    --subtext-color: #f0f0f0;
+    /* Brighter subtext */
+    --muted-color: #cccccc;
+    /* Brighter muted text */
+    --glass-bg: rgba(30, 30, 40, 0.6);
+    /* Much more visible dark tint, not just white alpha */
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --input-bg: rgba(255, 255, 255, 0.05);
+    /* Lighten inputs so they are visible on dark bg */
+    --header-bg: rgba(10, 10, 15, 0.95);
+    /* darker and more opaque header */
     --footer-bg: #000000;
-    --footer-text: #666666;
+    --footer-text: #aaaaaa;
+    /* Much lighter for visibility */
     --code-bg: rgba(20, 20, 30, 0.8);
 }
 
-[data-theme="light"] {
-    --bg-color: #f0f2f5;
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --card-border: rgba(0, 0, 0, 0.1);
-    --text-color: #333333;
-    --heading-color: #111111;
-    --subtext-color: #555555;
-    --muted-color: #666666;
-
-    --primary-color: #6200ea;
-    /* Slightly darker purple for light mode contrast */
-    --secondary-color: #00796b;
-    /* Darker teal/green */
-    --accent-color: #0277bd;
-    /* Darker blue */
-
-    --glass-bg: rgba(255, 255, 255, 0.9);
-    --glass-border: rgba(0, 0, 0, 0.1);
-    --input-bg: rgba(0, 0, 0, 0.05);
-
-    --header-bg: rgba(240, 242, 245, 0.9);
-    --footer-bg: #e0e0e0;
-    --footer-text: #444444;
-    --code-bg: #2d2d2d;
-    /* Keep code blocks dark for contrast */
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
 }
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Light Mode Removed for v1.3.0 */
 
 * {
     margin: 0;
@@ -188,9 +191,13 @@ h4 {
 }
 
 .nav-links a {
+    color: #ffffff;
+    /* Explicitly set to white for visibility */
     font-weight: 500;
     font-size: 1rem;
     position: relative;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Slight shadow to pop against any background */
 }
 
 .nav-links a:not(.cta-button)::after {
@@ -222,27 +229,7 @@ h4 {
     box-shadow: 0 0 15px rgba(81, 43, 212, 0.5);
 }
 
-#theme-toggle {
-    background: transparent;
-    border: none;
-    color: var(--heading-color);
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-left: 1rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    transition: var(--transition-speed);
-}
-
-#theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--primary-color);
-    transform: rotate(15deg);
-}
-
-[data-theme="light"] #theme-toggle:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
+/* Theme toggle removed */
 
 .hamburger {
     display: none;
@@ -496,6 +483,11 @@ h4 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.glass-card h3 {
+    color: var(--heading-color) !important;
+    /* Force visibility */
+}
+
 /* About Section */
 .about-grid {
     display: grid;
@@ -580,11 +572,13 @@ h4 {
 }
 
 .skill-tags span {
-    background: var(--input-bg);
+    background: rgba(255, 255, 255, 0.07);
+    /* Explicit lighter bg */
     border: 1px solid var(--glass-border);
     padding: 0.5rem 1rem;
     border-radius: 6px;
     font-size: 0.9rem;
+    color: #fff;
     transition: var(--transition-speed);
 }
 
@@ -646,6 +640,11 @@ h4 {
     font-weight: 600;
 }
 
+.timeline-content h3 {
+    color: var(--heading-color) !important;
+    margin-bottom: 0.2rem;
+}
+
 .timeline-content h4 {
     color: var(--muted-color);
     margin-bottom: 1rem;
@@ -676,6 +675,16 @@ h4 {
     overflow: hidden;
     padding: 0;
     /* Remove default padding to let image fill */
+    background: linear-gradient(180deg, rgba(25, 25, 35, 0.8) 0%, rgba(15, 15, 25, 0.95) 100%);
+    /* Stronger background for project cards */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(81, 43, 212, 0.15);
+    border-color: var(--primary-color);
 }
 
 .project-image {
@@ -692,6 +701,14 @@ h4 {
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease;
+    opacity: 0.9;
+    /* Slightly dim image initially */
+}
+
+.project-card:hover .placeholder-img {
+    transform: scale(1.1);
+    opacity: 1;
+    /* Brighten on hover */
 }
 
 .color-1 {
@@ -753,10 +770,12 @@ h4 {
 .project-links a {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--heading-color);
+    color: #ffffff !important;
+    /* Force white for links */
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .project-links a:hover {
@@ -790,6 +809,11 @@ textarea {
     font-family: var(--font-body);
     font-size: 1rem;
     transition: var(--transition-speed);
+}
+
+::placeholder {
+    color: var(--muted-color);
+    opacity: 0.8;
 }
 
 input:focus,
