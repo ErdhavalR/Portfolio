@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of a Senior .NET Developer with 4 years of experience in .NET technologies, Databases, Git, and Docker.">
+    <title>DevPortfolio | .NET Expert</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Dev of<span class="highlight">.NET</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="cta-button">Contact Me</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="badge">Senior Software Engineer</span>
+                <h1>Building Scalable <br><span class="gradient-text">.NET Solutions</span></h1>
+                <p>Specialized in architecting robust backend systems and cloud-native applications with 4+ years of
+                    expertise in Dotnet, Databases, Docker, and DevOps practices.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Let's Talk</a>
+                </div>
+                <div class="tech-stack-preview">
+                    <i class="fa-brands fa-microsoft" title=".NET"></i>
+                    <i class="fa-solid fa-database" title="Databases"></i>
+                    <i class="fa-brands fa-docker" title="Docker"></i>
+                    <i class="fa-brands fa-git-alt" title="Git"></i>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-block glass-card">
+                    <div class="window-controls">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
+                    <pre><code>
+<span class="keyword">public class</span> <span class="class-name">Developer</span> : <span class="interface">IEngineer</span>
+{
+    <span class="keyword">public string</span> Name { <span class="keyword">get</span>; } = <span class="string">"Dhaval"</span>;
+    <span class="keyword">public int</span> Experience { <span class="keyword">get</span>; } = <span class="number">4</span>;
+    
+    <span class="keyword">public void</span> <span class="method">BuildSolutions</span>()
+    {
+        <span class="comment">// Delivering excellence</span>
+        <span class="keyword">while</span> (alive)
+        {
+            Code();
+            Deploy();
+            Optimize();
+        }
+    }
+}
+                    </code></pre>
+                </div>
+                <div class="glow-sphere"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Who I Am</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>With 4 years of hands-on experience in the software industry, I specialize in the Microsoft
+                            technology stack. My passion lies in building high-performance, scalable web applications
+                            and microservices.</p>
+                        <p>I have a strong foundation in database management and modern DevOps practices, ensuring that
+                            the code I write is not only functional but also deployable and maintainable.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">4+</span>
+                                <span class="stat-label">Years Exp.</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Commits</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-cards">
+                        <div class="glass-card fade-in">
+                            <i class="fa-solid fa-server"></i>
+                            <h3>Backend Architecture</h3>
+                            <p>Designing robust APIs and microservices using ASP.NET Core.</p>
+                        </div>
+                        <div class="glass-card fade-in">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <h3>Cloud & DevOps</h3>
+                            <p>Containerization with Docker and CI/CD pipeline management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h3><i class="fa-brands fa-windows"></i> .NET Ecosystem</h3>
+                        <div class="skill-tags">
+                            <span>C#</span>
+                            <span>ASP.NET Core</span>
+                            <span>Entity Framework</span>
+                            <span>Web API</span>
+                            <span>MVC</span>
+                            <span>LINQ</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-database"></i> Databases</h3>
+                        <div class="skill-tags">
+                            <span>SQL Server</span>
+                            <span>PostgreSQL</span>
+                            <span>MySQL</span>
+                            <span>Database Design</span>
+                            <span>Performance Tuning</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools & DevOps</h3>
+                        <div class="skill-tags">
+                            <span>Git</span>
+                            <span>GitHub/GitLab</span>
+                            <span>Docker</span>
+                            <span>CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Professional Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="date">2024 - Present</span>
+                            <h3>Senior .NET Developer</h3>
+                            <h4>Tech Solutions Inc.</h4>
+                            <ul>
+                                <li>Led the migration of legacy monoliths to microservices using .NET 8.</li>
+                                <li>Optimized database queries reducing load times by 40%.</li>
+                                <li>Implemented Docker containerization for development and production environments.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="date">2022 - 2024</span>
+                            <h3>Software Engineer</h3>
+                            <h4>Innovate Corp</h4>
+                            <ul>
+                                <li>Developed RESTful APIs for high-traffic e-commerce platforms.</li>
+                                <li>Collaborated with frontend teams to integrate seamless user experiences.</li>
+                                <li>Maintained CI/CD pipelines ensuring 99.9% uptime.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="date">2020 - 2022</span>
+                            <h3>Junior Developer</h3>
+                            <h4>StartUp Hub</h4>
+                            <ul>
+                                <li>Assisted in building internal tools using ASP.NET MVC.</li>
+                                <li>Managed database schema updates and stored procedures.</li>
+                                <li>Introduced Git workflows to the team, improving collaboration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image" id="project-img-1">
+                            <div class="placeholder-img color-1"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Commerce Microservices</h3>
+                            <p>A scalable e-commerce backend built with .NET Core microservices, RabbitMQ, and Docker.
+                            </p>
+                            <div class="tags">
+                                <span>.NET Core</span>
+                                <span>Docker</span>
+                                <span>RabbitMQ</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image" id="project-img-2">
+                            <div class="placeholder-img color-2"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Real-time Dashboard</h3>
+                            <p>Live data visualization dashboard using SignalR and SQL Server for manufacturing data.
+                            </p>
+                            <div class="tags">
+                                <span>ASP.NET</span>
+                                <span>SignalR</span>
+                                <span>SQL Server</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image" id="project-img-3">
+                            <div class="placeholder-img color-3"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>DevOps Automation Tool</h3>
+                            <p>Custom CLI tool for automating database migrations and container deployments.</p>
+                            <div class="tags">
+                                <span>C#</span>
+                                <span>CLI</span>
+                                <span>Docker API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-desc">Interested in working together or have a question? Feel free to reach out.</p>
+                <div class="contact-card glass-card">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="mailto:email@example.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 DevPortfolio. Built with .NET passion.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
